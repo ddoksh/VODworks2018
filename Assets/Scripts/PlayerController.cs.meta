@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: fbcc9d755720978408e80b00c9a24163
+timeCreated: 1506397286
+licenseType: Pro
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - BasicColor: {fileID: 2100000, guid: 963b08836450b7346a16b028f5632b77, type: 2}
+  - NinjaModeColor: {fileID: 2100000, guid: 2fd46be4f9733404485ed8ab78f9192d, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
