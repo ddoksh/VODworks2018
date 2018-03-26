@@ -114,14 +114,14 @@ public class PlayerController : MonoBehaviour
     //닌자모드 실행시 플레이어컬러 교체
     private IEnumerator NinjaMode()
     {
-        gameObject.GetComponent<BoxCollider2D>().enabled = false;
+        gameObject.GetComponent<BoxCollider>().enabled = false;
         gameObject.GetComponent<MeshRenderer>().material = NinjaModeColor;
         dodge_particle.Play();
 
         Debug.Log("은신모드 전");
         yield return new WaitForSeconds(5);
         gameObject.GetComponent<MeshRenderer>().material = BasicColor;
-        gameObject.GetComponent<BoxCollider2D>().enabled = true;
+        gameObject.GetComponent<BoxCollider>().enabled = true;
         modeActive = false;
         dodge_particle.Stop();
         Debug.Log("은신모드 후");
