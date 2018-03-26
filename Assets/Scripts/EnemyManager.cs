@@ -31,7 +31,9 @@ public class EnemyManager : MonoBehaviour
         position.x = Mathf.Sin(radian);
         position.y = Mathf.Cos(radian);
         position.Normalize();
+        position *= distance;
+        position.z = 0f;
 
-        return position * distance;
+        return position;
     }
 }

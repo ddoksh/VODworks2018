@@ -151,14 +151,14 @@ public class PlayerController : MonoBehaviour
     {
         GameObject BombField = GameObject.Find("ExplosionField");
 
-        BombField.GetComponent<CircleCollider2D>().enabled = true;
+        BombField.GetComponent<SphereCollider>().enabled = true;
         gameObject.GetComponent<MeshRenderer>().material = ExploModeColor;
         Explosion_Particle.SetActive(true);
 
         Debug.Log("폭발전");
         yield return new WaitForSeconds(0.5f);
         gameObject.GetComponent<MeshRenderer>().material = BasicColor;
-        BombField.GetComponent<CircleCollider2D>().enabled = false;
+        BombField.GetComponent<SphereCollider>().enabled = false;
         modeActive = false;
         Explosion_Particle.SetActive(false);
         Debug.Log("폭발후");
@@ -169,14 +169,14 @@ public class PlayerController : MonoBehaviour
     {
         GameObject BombField = GameObject.Find("ShieldField");
 
-        BombField.GetComponent<CircleCollider2D>().enabled = true;
+        BombField.GetComponent<SphereCollider>().enabled = true;
         gameObject.GetComponent<MeshRenderer>().material = ShieldModeColor;
         shield_particle.Play();
 
         Debug.Log("쉴드전");
         yield return new WaitForSeconds(3);
         gameObject.GetComponent<MeshRenderer>().material = BasicColor;
-        BombField.GetComponent<CircleCollider2D>().enabled = false;
+        BombField.GetComponent<SphereCollider>().enabled = false;
         modeActive = false;
         shield_particle.Stop();
         Debug.Log("쉴드후");
@@ -206,21 +206,25 @@ public class PlayerController : MonoBehaviour
      *
     */
 
-    private void OnTriggerEnter2D(Collider2D collision)
+
+    private void OnTriggerEnter(Collider collision)
     {
-        Debug.Log("Death");
-        RestartButton.Show();
+        if (collision.tag == "Enemy")
+        {
+            Debug.Log("Death");
+            RestartButton.Show();
 
-        //GetComponentInChildren<ParticleSystem>().Play();
-        death_particle.Play();
+            //GetComponentInChildren<ParticleSystem>().Play();
+            death_particle.Play();
 
-        StopToEnemy();
-        StopToPlayer();
+            StopToEnemy();
+            StopToPlayer();
 
-        //Time.timeScale = 0f;
+            //Time.timeScale = 0f;
 
-        GetComponent<AudioSource>().Play();
-        GameObject.Find("BGM").GetComponent<AudioSource>().Stop();
+            GetComponent<AudioSource>().Play();
+            GameObject.Find("BGM").GetComponent<AudioSource>().Stop();
+        }
     }
 
     public void StopToEnemy()
