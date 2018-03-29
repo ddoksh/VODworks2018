@@ -54,6 +54,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -69,6 +70,7 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -196,7 +198,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -226,11 +228,11 @@ MonoBehaviour:
   NinjaModeColor: {fileID: 2100000, guid: 2fd46be4f9733404485ed8ab78f9192d, type: 2}
   ExploModeColor: {fileID: 2100000, guid: b9c677ea78ee6c14ba6327293e52c726, type: 2}
   ShieldModeColor: {fileID: 0}
-  FakeModeColor: {fileID: 0}
+  BulletTimeModeColor: {fileID: 0}
   weaponCount: 1000
   death_particle: {fileID: 0}
   shield_particle: {fileID: 0}
   dodge_particle: {fileID: 0}
-  Fake_particle: {fileID: 0}
   Explosion_Particle: {fileID: 0}
   modeActive: 0
+  fakePlayerPrefab: {fileID: 0}

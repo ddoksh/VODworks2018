@@ -5,6 +5,6 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
-    path: Assets/SimpleGame.unity
-    guid: 03fb0fd5026aaee42b2fba40dcbe1b53
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000

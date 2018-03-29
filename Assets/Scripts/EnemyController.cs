@@ -10,6 +10,8 @@ public class EnemyController : MonoBehaviour
 
     public Vector3 dir = Vector3.zero;
 
+    private bool isPassed = false;
+
     private void Start()
     {
         ChangeTarget("Player");
@@ -35,5 +37,15 @@ public class EnemyController : MonoBehaviour
     public void ReturnE_Speed()
     {
         speed = levelSpeed;
+    }
+
+    public bool GetPassed()
+    {
+        if (!isPassed)
+        {
+            isPassed = true;
+            return false;
+        }
+        return true;
     }
 }
