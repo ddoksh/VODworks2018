@@ -8,3 +8,6 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/DodgeMan.unity
+    guid: 44f0775f52e2dba4c80aa7cf2950a83b
