@@ -23,7 +23,7 @@ public class BonusScore : MonoBehaviour {
             if (other.GetComponent<EnemyController>().GetPassed() == false)
             {
                 bonusScore += 10;
-                bonusText.text = bonusScore.ToString();
+                bonusText.text = "BonusScore:" + bonusScore.ToString() + "점";
             }
         }
     }

@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
- using UnityStandardAssets.CrossPlatformInput;
+using CnControls;
 
 [RequireComponent(typeof(AudioSource))]
 public class PlayerController : MonoBehaviour
@@ -43,8 +43,8 @@ public class PlayerController : MonoBehaviour
         SField = GameObject.Find("ShieldField").gameObject;
         SField.transform.position = gameObject.transform.position;
 
-        float h = CrossPlatformInputManager.GetAxis("Horizontal");
-        float v = CrossPlatformInputManager.GetAxis("Vertical");
+        float h = CnInputManager.GetAxis("Horizontal");
+        float v = CnInputManager.GetAxis("Vertical");
 
 #if UNITY_EDITOR
         h = Input.GetAxis("Horizontal");
@@ -106,7 +106,7 @@ public class PlayerController : MonoBehaviour
         }
 
         //블릿타임 모드추가
-        if (Input.GetKeyDown(KeyCode.Alpha4) && weaponCount > 0 || CrossPlatformInputManager.GetButtonDown("Jump"))
+        if (Input.GetKeyDown(KeyCode.Alpha4) && weaponCount > 0 || CnInputManager.GetButtonDown("Jump"))
         {
             if (modeActive == false)
             {

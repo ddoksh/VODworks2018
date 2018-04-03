@@ -644,13 +644,13 @@ PlayerSettings:
       daydreamIconForeground: {fileID: 0}
       daydreamIconBackground: {fileID: 0}
   cloudServicesEnabled:
-    Collab: 1
+    Collab: 0
     UNet: 1
   facebookSdkVersion: 7.9.4
   apiCompatibilityLevel: 2
-  cloudProjectId: 0ce909c0-1699-4ba6-96cc-2bfe16b8528a
-  projectName: SimpleGame
-  organizationId: ddoksh
+  cloudProjectId: cc2f3ad5-778e-43bd-b03b-4c1a0a744b76
+  projectName: DodgeMan ver0.1
+  organizationId: song-chan-woo
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0
